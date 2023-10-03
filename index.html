@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Adventures: A Journey Through My Work</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c3befc1c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <H1 class="logo">Shashank Jaiswal</H1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#work">Work</a></li> -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars fas " onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Hi , I'm <span>Shashsank Jaiswal </span><br> from Lucknow</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----about me--- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="header_img.png" alt="" srcset="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Seeking a challenging and rewarding career opportunity where I can leverage my strong educational
+background in Computer Science Engineering with a specialization in Artificial Intelligence and Machine Learning. Eager to contribute my proficiency in web development technologies and burgeoning knowledge in AI and ML, aiming to make a meaningful impact in a dynamic and innovative work environment.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><Span>Proficient in:</Span><br> i) HTML <br>
+                                ii) CSS <br>
+                                iii) JavaScript
+                            </li>
+                            <li><Span>HTML, CSS, and JavaScript for Web Developers</Span><br>Completed the "HTML,
+                                CSS, and JavaScript for Web Developers"
+                                course on Coursera, gaining a strong foundation in web development
+                                technologies.</li>
+                            <li><Span>Machine Learning</Span><br>Actively engaged in ongoing Machine Learning
+                                coursework on
+                                Coursera, further enhancing knowledge and skills in the field of AI
+                                and ML.</li>
+
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><Span>2022-2026</Span><br>B. Tech in (H) Computer Science Engineering - Specialization
+                                in Artificial Intelligence and Machine Learning.<br>
+                                University of Petroleum and Energy Studies</li>
+                            <li><Span>2020-2021</Span><br>XII ISC <br>City Montessori School , Lucknow</li>
+                            <li><Span>2018-2019</Span><br>X ISC <br>City Montessori School , Lucknow</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------My Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+
+                    <a href="https://shyam652003.github.io/project2-modified-/" target="_blank"><img
+                            src="work/work1.png" alt="" srcset="">
+                        <h3>Template of a Restaurant Website</h3>
+                    </a>
+                </div>
+                <div class="work">
+
+                    <a href="https://shyam652003.github.io/Snake-game/" target="_blank"><img src="work/work3.png" alt=""
+                            srcset="">
+                        <h3>Snake game</h3>
+                    </a>
+                </div>
+                <div class="work">
+                    <a href="https://shyam652003.github.io/module3-solution/" target="_blank"><img
+                            src="work/work2(1).png" alt="" srcset="">
+                        <h3>Demonstation of flex property</h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------contact----- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact me</h1>
+                    <p><i class="fas fa-paper-plane"></i>shashankjaiswal266@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i></i>9839831220</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Shyam652003"><i class="fa-brands fa-git"></i></a>
+                        <a href="https://www.linkedin.com/in/shashank-jaiswal-b55429256"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="resume official (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright "></i> Shashank Jaiswal. <i
+                    class="fa-solid fa-heart heart"></i>Coding Adventures: A Journey Through My Work</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+    </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzrAjAM_9Ia0NeFtIIqwNrVi6vzPsmO4yvow0JsWF4N3hpwfC9XPrfNSU8ZltEZNGMZ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
